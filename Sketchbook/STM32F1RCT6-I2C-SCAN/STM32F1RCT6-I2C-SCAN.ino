@@ -1,19 +1,17 @@
-// Failed, flash overflow
-// enable generic uart in settings
+// I2C 
+// PB6 SCL
+// PB7 SDA
+// UART PA9 PA10
+
+
 
 #include <Wire.h>
 
 
 void setup() {
-  
-  Wire.setSDA(PA10);
-  Wire.setSCL(PA9);
-  Wire.begin();
-  
-  Serial.setRx(PA3);
-  Serial.setTx(PA2);
-  Serial.begin(9600);
 
+  Serial.begin(9600);
+  Wire.begin();
   Serial.println("\nI2C Scanner");
 }
 
